@@ -1,0 +1,87 @@
+/* GENERAL */
+:root {
+  --color-primary: #0061ff;
+  --color-primary-transparent: rgba(0, 97, 255, 0.7);
+  --color-secondary: #b4d0e7;
+  --text-color-primary: #000000;
+  --text-color-secondary: #ffffff;
+  --text-color-tertiary: #999999;
+
+  --font: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* DEBUG */
+.debug {
+  background-color: greenyellow;
+  border: 1px solid black;
+}
+
+/* HEADER */
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  height: 100%;
+}
+
+nav .header-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav .header-menu #logo-small {
+  height: 20px;
+  transform: translateY(3px);
+  /* Nota: per centrare logo in verticale con altri li del menu che, per avere bordo inferiore in hover devono essere alti 100%+ + 3px */
+}
+
+nav .header-menu li {
+  padding: 0 15px;
+  font-size: 0.8rem;
+  line-height: 80px;
+}
+
+nav .header-menu li a:not(.btn) {
+  display: inline-block;
+  height: calc(100% + 3px);
+  border-bottom: 3px solid transparent;
+}
+
+nav .header-menu li a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+/* BUTTON */
+.btn {
+  background: var(--color-primary);
+  color: var(--text-color-secondary);
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-transparent);
+}
