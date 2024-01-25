@@ -3,6 +3,7 @@
   --color-primary: #0061ff;
   --color-primary-transparent: rgba(0, 97, 255, 0.7);
   --color-secondary: #b4d0e7;
+  --color-tertiary: #d0d0d3;
   --text-color-primary: #000000;
   --text-color-secondary: #ffffff;
   --text-color-tertiary: #999999;
@@ -41,25 +42,28 @@ img {
   margin: 0 auto;
 }
 
+.container-small {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .text-xl {
-  /* h1 */
   font-size: 4rem;
   font-weight: 800;
 }
 
 .text-l {
-  /* h2 */
   font-size: 2rem;
 }
 
 .text-m {
-  /* h3 */
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .text-base {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .margin-bottom-xl {
@@ -67,11 +71,11 @@ img {
 }
 
 .margin-bottom-l {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .margin-bottom-s {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 /* HEADER */
@@ -147,7 +151,128 @@ main {
 }
 
 /* MAIN - BUSINESS PLAN SECTION */
-#business-plan {
+#business-plan .container-small {
+  padding: 160px 0;
+}
+
+#business-plan .billing-plan {
+  display: flex;
+}
+
+.radio-button {
+  margin-right: 40px;
+}
+
+.radio-button::before {
+  display: inline-block;
+  content: "";
+  outline: 2px solid var(--color-tertiary);
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.radio-button.checked::before {
+  outline: 4px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.business-plan-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-plan-card {
+  border: 1px solid var(--color-tertiary);
+  width: calc(100% / 3);
+  margin-bottom: 50px;
+}
+
+.business-plan-grid .business-plan-card:not(:last-child) {
+  margin-right: 50px;
+}
+
+.business-plan-card .card-top {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-tertiary);
+}
+
+.business-plan-card .card-middle,
+.business-plan-card .card-bottom {
+  padding: 30px 25px;
+}
+
+.card-middle .bp-cost {
+  color: var(--text-color-tertiary);
+  font-weight: 600;
+}
+
+.card-middle li,
+.card-bottom li {
+  display: flex;
+  align-items: first baseline;
+  padding-top: 25px;
+}
+
+.card-middle li i,
+.card-bottom li i {
+  padding-right: 5px;
+}
+
+.card-bottom li i {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.card-middle .buy-now {
+  margin-top: 30px;
+}
+
+.buy-now .visited {
+  text-decoration: underline;
+  color: #551a8b;
+}
+
+.card-bottom {
+  position: relative;
+}
+
+.card-bottom::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50px;
+  top: 0;
+  border-bottom: 1px solid var(--color-tertiary);
+}
+
+.card-middle .btn {
+  text-align: center;
+}
+
+.business-plan-card.card-large {
+  border: 1px solid var(--color-tertiary);
+  width: 100%;
+}
+
+.card-large .card-middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-large .card-large-left {
+  width: 70%;
+}
+
+.card-large .card-large-right {
+  width: 25%;
+}
+
+.card-large .card-large-right {
+  height: fit-content;
 }
 
 /* BUTTON */
