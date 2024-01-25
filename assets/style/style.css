@@ -29,10 +29,49 @@ a {
   color: inherit;
 }
 
-/* DEBUG */
-.debug {
-  background-color: greenyellow;
-  border: 1px solid black;
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* UTILITIES */
+.container-large {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-xl {
+  /* h1 */
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.text-l {
+  /* h2 */
+  font-size: 2rem;
+}
+
+.text-m {
+  /* h3 */
+  font-size: 1.5rem;
+}
+
+.text-base {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 70px;
+}
+
+.margin-bottom-l {
+  margin-bottom: 55px;
+}
+
+.margin-bottom-s {
+  margin-bottom: 30px;
 }
 
 /* HEADER */
@@ -41,10 +80,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--text-color-secondary);
+  z-index: 999;
 }
 
 nav {
-  height: 100%;
+  height: calc(100% + 3px);
 }
 
 nav .header-menu {
@@ -61,13 +105,12 @@ nav .header-menu #logo-small {
 
 nav .header-menu li {
   padding: 0 15px;
-  font-size: 0.8rem;
-  line-height: 80px;
+  line-height: 83px;
 }
 
 nav .header-menu li a:not(.btn) {
   display: inline-block;
-  height: calc(100% + 3px);
+  height: 100%;
   border-bottom: 3px solid transparent;
 }
 
@@ -75,11 +118,43 @@ nav .header-menu li a:hover {
   border-bottom-color: var(--color-primary);
 }
 
+/* HERO  */
+main {
+  margin-top: 80px;
+}
+
+.hero {
+  background-color: var(--color-secondary);
+  padding-top: 100px;
+}
+
+.hero-box {
+  display: flex;
+  position: relative;
+}
+
+.hero-box .hero-textbox {
+  width: 30%;
+}
+
+.hero-box .hero-textbox i {
+  font-size: 3rem;
+}
+
+.hero-box .hero-img {
+  width: 60%;
+  object-fit: cover;
+}
+
+/* MAIN - BUSINESS PLAN SECTION */
+#business-plan {
+}
+
 /* BUTTON */
 .btn {
   background: var(--color-primary);
   color: var(--text-color-secondary);
-  padding: 5px 10px;
+  padding: 6px 12px;
 }
 
 .btn:hover {
