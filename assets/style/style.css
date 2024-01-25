@@ -30,11 +30,6 @@ a {
   color: inherit;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
 /* UTILITIES */
 .container-large {
   max-width: 1200px;
@@ -49,20 +44,25 @@ img {
 }
 
 .text-xl {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 800;
 }
 
 .text-l {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .text-m {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .text-base {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.text-s {
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -71,11 +71,15 @@ img {
 }
 
 .margin-bottom-l {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .margin-bottom-s {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 20px;
 }
 
 /* HEADER */
@@ -102,17 +106,17 @@ nav .header-menu {
 }
 
 nav .header-menu #logo-small {
-  height: 20px;
+  height: 25px;
   transform: translateY(3px);
   /* Nota: per centrare logo in verticale con altri li del menu che, per avere bordo inferiore in hover devono essere alti 100%+ + 3px */
 }
 
 nav .header-menu li {
-  padding: 0 15px;
+  padding: 0 20px;
   line-height: 83px;
 }
 
-nav .header-menu li a:not(.btn) {
+nav .header-menu li a:not(.btn-small) {
   display: inline-block;
   height: 100%;
   border-bottom: 3px solid transparent;
@@ -141,13 +145,21 @@ main {
   width: 30%;
 }
 
+.hero-box a {
+  display: inline-block;
+}
+
 .hero-box .hero-textbox i {
   font-size: 3rem;
 }
 
 .hero-box .hero-img {
-  width: 60%;
+  width: 70%;
+  position: absolute;
   object-fit: cover;
+  z-index: 998;
+  top: 0;
+  right: 0;
 }
 
 /* MAIN - BUSINESS PLAN SECTION */
@@ -168,15 +180,15 @@ main {
   content: "";
   outline: 2px solid var(--color-tertiary);
   border-radius: 50%;
-  height: 12px;
-  width: 12px;
+  height: 15px;
+  width: 15px;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .radio-button.checked::before {
-  outline: 4px solid var(--color-primary);
-  outline-offset: -2px;
+  outline: 5px solid var(--color-primary);
+  outline-offset: -2.5px;
 }
 
 .business-plan-grid {
@@ -202,7 +214,7 @@ main {
 
 .business-plan-card .card-middle,
 .business-plan-card .card-bottom {
-  padding: 30px 25px;
+  padding: 35px 30px;
 }
 
 .card-middle .bp-cost {
@@ -219,7 +231,7 @@ main {
 
 .card-middle li i,
 .card-bottom li i {
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 .card-bottom li i {
@@ -277,9 +289,13 @@ main {
 
 /* BUTTON */
 .btn {
-  background: var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--text-color-secondary);
-  padding: 6px 12px;
+  padding: 15px;
+}
+
+.btn-small {
+  padding: 10px;
 }
 
 .btn:hover {
