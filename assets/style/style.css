@@ -133,12 +133,16 @@ main {
 
 .hero {
   background-color: var(--color-secondary);
-  padding-top: 100px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.hero .container-large {
+  transform: translateY(80px);
 }
 
 .hero-box {
   display: flex;
-  position: relative;
 }
 
 .hero-box .hero-textbox {
@@ -151,20 +155,18 @@ main {
 
 .hero-box .hero-textbox i {
   font-size: 3rem;
+  position: absolute;
+  bottom: 80px;
 }
 
 .hero-box .hero-img {
   width: 70%;
-  position: absolute;
-  object-fit: cover;
-  z-index: 998;
-  top: 0;
-  right: 0;
+  object-fit: contain;
 }
 
 /* MAIN - BUSINESS PLAN SECTION */
 #business-plan .container-small {
-  padding: 160px 0;
+  padding-top: 160px;
 }
 
 #business-plan .billing-plan {
@@ -268,6 +270,7 @@ main {
 .business-plan-card.card-large {
   border: 1px solid var(--color-tertiary);
   width: 100%;
+  margin-bottom: 0;
 }
 
 .card-large .card-middle {
@@ -287,6 +290,30 @@ main {
   height: fit-content;
 }
 
+/* MAIN - PARTNER */
+#find-partner .container-small {
+  padding-top: 150px;
+  display: flex;
+}
+
+.find-partner-imagebox {
+  width: 60%;
+}
+
+.find-partner-textbox {
+  width: 40%;
+  padding: 0 50px;
+}
+
+.find-partner-textbox a {
+  display: inline-block;
+}
+
+.find-partner-imagebox img {
+  object-fit: cover;
+  width: 100%;
+}
+
 /* BUTTON */
 .btn {
   background-color: var(--color-primary);
@@ -296,6 +323,12 @@ main {
 
 .btn-small {
   padding: 10px;
+}
+
+.btn-white {
+  background-color: var(--text-color-secondary);
+  color: inherit;
+  border: 1px solid var(--text-color-primary);
 }
 
 .btn:hover {
