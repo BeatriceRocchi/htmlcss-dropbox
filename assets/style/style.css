@@ -4,6 +4,7 @@
   --color-primary-transparent: rgba(0, 97, 255, 0.7);
   --color-secondary: #b4d0e7;
   --color-tertiary: #d0d0d3;
+  --color-quaternary: #61082b;
   --text-color-primary: #000000;
   --text-color-secondary: #ffffff;
   --text-color-tertiary: #999999;
@@ -436,6 +437,68 @@ main {
 
 .logos-square-item.yellow-bg {
   background-color: #ffd830;
+}
+
+/* MAIN - FREE TRIAL */
+#free-trial {
+  background-color: var(--color-secondary);
+}
+
+#free-trial .container-small {
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-between;
+  padding: 135px 0;
+}
+
+#free-trial h2 {
+  color: var(--color-quaternary);
+  width: 50%;
+}
+
+#free-trial .container-small .btn-container {
+  width: 30%;
+}
+
+#free-trial .btn-container .btn-white {
+  border: none;
+  padding: 15px 45px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--text-color-primary);
+  color: var(--text-color-secondary);
+}
+
+.upper-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.upper-footer li {
+  padding-bottom: 15px;
+}
+
+.lower-footer {
+  color: var(--text-color-tertiary);
+  padding: 50px 0;
+  position: relative;
+}
+
+.lower-footer i,
+.lower-footer span {
+  padding-right: 5px;
+}
+
+footer .lower-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 90px;
+  border-bottom: 1px solid var(--color-tertiary);
 }
 
 /* BUTTON */
