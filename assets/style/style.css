@@ -465,6 +465,28 @@ main {
   padding: 15px 45px;
 }
 
+/* FAQ */
+#faq {
+  padding: 160px 0;
+}
+
+.faq-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0;
+  border-top: 1px solid var(--text-color-tertiary);
+  font-weight: 700;
+}
+
+.faq-row:last-child {
+  border-bottom: 1px solid var(--text-color-tertiary);
+}
+
+.faq-row i {
+  padding-right: 50px;
+}
+
 /* FOOTER */
 footer {
   background-color: var(--text-color-primary);
@@ -485,10 +507,12 @@ footer {
   color: var(--text-color-tertiary);
   padding: 50px 0;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .lower-footer i,
-.lower-footer span {
+.lower-footer div {
   padding-right: 5px;
 }
 
