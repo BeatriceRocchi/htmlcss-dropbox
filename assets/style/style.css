@@ -379,10 +379,31 @@ main {
   padding: 50px;
 }
 
-#central-text img {
-  width: 250px;
-  object-fit: contain;
-  object-position: top;
+#central-text.logos-square-big {
+  display: block;
+}
+
+#central-text .imgbox {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#central-text .textbox {
+  position: relative;
+}
+
+#central-text .textbox p::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90px;
+  top: -25px;
+  border-bottom: 1px solid var(--color-tertiary);
+}
+
+#central-text .imgbox img {
+  width: 60%;
+  height: auto;
 }
 
 .logos-square-item.green-bg {
