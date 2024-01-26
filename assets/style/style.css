@@ -290,7 +290,7 @@ main {
   height: fit-content;
 }
 
-/* MAIN - PARTNER */
+/* MAIN - PARTNER SECTION */
 #find-partner .container-small {
   padding-top: 150px;
   display: flex;
@@ -311,6 +311,28 @@ main {
 
 .find-partner-imagebox img {
   object-fit: cover;
+  width: 100%;
+}
+
+/* MAIN - BUSINESS SECTION */
+#dropbox-business {
+  padding-top: 150px;
+}
+
+#dropbox-business .features-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.features-grid .feature-card {
+  width: 28%;
+  min-width: 300px;
+  margin-top: 70px;
+  aspect-ratio: 16 / 9;
+}
+
+.features-grid .feature-card img {
   width: 100%;
 }
 
