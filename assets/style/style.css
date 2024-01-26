@@ -476,15 +476,27 @@ main {
   align-items: center;
   padding: 45px 0;
   border-top: 1px solid var(--text-color-tertiary);
+}
+
+.faq-row .question {
   font-weight: 700;
 }
 
-.faq-row:last-child {
+.faq-row:nth-last-child(2) {
   border-bottom: 1px solid var(--text-color-tertiary);
 }
 
 .faq-row i {
   padding-right: 50px;
+}
+
+.answer {
+  display: none;
+  padding: 20px 0;
+}
+
+.faq-row:hover + .answer {
+  display: block;
 }
 
 /* FOOTER */
