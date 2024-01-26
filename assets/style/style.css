@@ -245,11 +245,6 @@ main {
   margin-top: 30px;
 }
 
-.buy-now .visited {
-  text-decoration: underline;
-  color: #551a8b;
-}
-
 .card-bottom {
   position: relative;
 }
@@ -336,6 +331,16 @@ main {
   width: 100%;
 }
 
+/* MAIN - DROPBOX CLIENTS */
+#dropbox-clients {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#dropbox-clients h2 {
+  width: 60%;
+}
+
 /* BUTTON */
 .btn {
   background-color: var(--color-primary);
@@ -355,4 +360,9 @@ main {
 
 .btn:hover {
   background-color: var(--color-primary-transparent);
+}
+
+.visited {
+  text-decoration: underline;
+  color: #551a8b;
 }
