@@ -341,6 +341,82 @@ main {
   width: 60%;
 }
 
+/* MAIN - DROPBOX CLIENTS LOGOS */
+#dropbox-clients-logos .logos-grid {
+  display: flex;
+}
+
+.logos-grid .logos-square-big {
+  width: calc(100vw / 3);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+}
+
+.logos-square-big .logos-square-item {
+  width: 50%;
+  position: relative;
+}
+
+.logos-square-item img {
+  width: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
+}
+
+.logos-square-item:hover {
+  outline: 15px solid rgba(255, 255, 255, 0.4);
+  outline-offset: -15px;
+}
+
+#central-text {
+  overflow: auto;
+  padding: 50px;
+}
+
+#central-text img {
+  width: 250px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.logos-square-item.green-bg {
+  background-color: #a2d39b;
+}
+
+.logos-square-item.bordeaux-bg {
+  background-color: #61082b;
+}
+
+.logos-square-item.azure-bg {
+  background-color: #0093ce;
+}
+
+.logos-square-item.red-bg {
+  background-color: #ff1c1c;
+}
+
+.logos-square-item.darkred-bg {
+  background-color: #d5001f;
+}
+
+.logos-square-item.light-blue-bg {
+  background-color: var(--color-secondary);
+}
+
+.logos-square-item.blue-bg {
+  background-color: #0d2481;
+}
+
+.logos-square-item.yellow-bg {
+  background-color: #ffd830;
+}
+
 /* BUTTON */
 .btn {
   background-color: var(--color-primary);
