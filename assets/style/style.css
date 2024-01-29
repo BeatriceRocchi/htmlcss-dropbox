@@ -149,6 +149,11 @@ nav .header-menu li a:hover {
   line-height: 2rem;
   opacity: 0;
   background-color: var(--color-tertiary-light);
+  transition: all 0.5s ease-in;
+}
+
+.dropdown-menu .dropdown-link {
+  transition: all 0.5s ease-in;
 }
 
 .dropdown-menu .dropdown li {
@@ -170,6 +175,7 @@ nav .header-menu li a:hover {
 .dropdown-menu .dropdown-link:hover + .dropdown {
   opacity: 1;
   visibility: visible;
+  animation: dropdown-move 0.4s ease-in;
 }
 
 .dropdown-menu .dropdown-link:hover {
@@ -643,4 +649,22 @@ footer .lower-footer::before {
 .visited {
   text-decoration: underline;
   color: #551a8b;
+}
+
+/* ANIMATIONS */
+@keyframes dropdown-move {
+  0% {
+    height: 0;
+    color: transparent;
+  }
+
+  50% {
+    height: 250px;
+    color: transparent;
+  }
+
+  100% {
+    height: 500px;
+    color: inherit;
+  }
 }
