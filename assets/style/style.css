@@ -141,7 +141,7 @@ main {
 }
 
 .hero .container-large {
-  transform: translateY(80px);
+  transform: translateY(60px);
 }
 
 .hero-box {
@@ -166,9 +166,9 @@ main {
 }
 
 .hero-box .hero-textbox i {
-  font-size: 3.5rem;
+  font-size: 3rem;
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
 }
 
 /* MAIN - BUSINESS PLAN SECTION */
@@ -501,12 +501,17 @@ main {
 }
 
 .answer {
-  display: none;
-  padding: 20px 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity .5s ease-in, visibility .5s ease-in;
 }
 
 .faq-row:hover + .answer {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  padding-bottom: 20px;
 }
 
 .faq-row:hover i {
@@ -565,6 +570,7 @@ footer .lower-footer::before {
   background-color: var(--color-primary);
   color: var(--text-color-secondary);
   padding: 15px;
+  transition: all .5s;
 }
 
 .btn-small {
@@ -579,6 +585,7 @@ footer .lower-footer::before {
 
 .btn:hover {
   background-color: var(--color-primary-transparent);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .btn-white:hover {
