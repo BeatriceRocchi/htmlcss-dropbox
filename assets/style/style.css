@@ -4,7 +4,9 @@
   --color-primary-transparent: rgba(0, 97, 255, 0.7);
   --color-secondary: #b4d0e7;
   --color-tertiary: #d0d0d3;
+  --color-tertiary-light: #f5f5f5;
   --color-quaternary: #61082b;
+
   --text-color-primary: #000000;
   --text-color-secondary: #ffffff;
   --text-color-tertiary: #999999;
@@ -68,6 +70,11 @@ a {
   font-weight: 500;
 }
 
+.text-xs {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
 /* UTILITIES - MARGIN */
 .margin-bottom-xl {
   margin-bottom: 70px;
@@ -118,6 +125,7 @@ nav .header-menu #logo-small {
 nav .header-menu li {
   padding: 0 20px;
   line-height: 83px;
+  position: relative;
 }
 
 nav .header-menu li a:not(.btn-small) {
@@ -128,6 +136,44 @@ nav .header-menu li a:not(.btn-small) {
 
 nav .header-menu li a:hover {
   border-bottom-color: var(--color-primary);
+}
+
+/* HEADER - DROPDOWN MENU*/
+.header-menu .dropdown-menu .dropdown {
+  position: absolute;
+  visibility: hidden;
+  width: 400px;
+  top: 83px;
+  left: 20px;
+  padding: 20px;
+  line-height: 2rem;
+  opacity: 0;
+  background-color: var(--color-tertiary-light);
+}
+
+.dropdown-menu .dropdown li {
+  line-height: 1.2rem;
+  padding: 10px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dropdown-menu .dropdown li .light-text {
+  color: var(--text-color-tertiary);
+}
+
+.dropdown-menu .dropdown li i {
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+.dropdown-menu .dropdown-link:hover + .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu .dropdown-link:hover {
+  background-color: var(--color-tertiary-light);
 }
 
 /* HERO  */
@@ -362,7 +408,7 @@ main {
   aspect-ratio: 1 / 1;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f5f5f5;
+  background-color: var(--color-tertiary-light);
 }
 
 .logos-square-big .logos-square-item {
@@ -380,7 +426,7 @@ main {
   filter: brightness(0) invert(1);
 }
 
-.logos-square-item:hover {
+.logos-square-item.active {
   outline: 15px solid rgba(255, 255, 255, 0.4);
   outline-offset: -15px;
 }
@@ -504,7 +550,7 @@ main {
   opacity: 0;
   visibility: hidden;
   height: 0;
-  transition: opacity .5s ease-in, visibility .5s ease-in;
+  transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
 }
 
 .faq-row:hover + .answer {
@@ -570,7 +616,7 @@ footer .lower-footer::before {
   background-color: var(--color-primary);
   color: var(--text-color-secondary);
   padding: 15px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .btn-small {
